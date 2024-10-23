@@ -31,7 +31,7 @@ public abstract class ProblemTestConfigure {
         throws IOException {
         setInput(input);
         problemInterface.solution(null);
-        assertEquals(outContent.toString(), actual);
+        assertEquals(actual, outContent.toString());
     }
 
     private void setInput(String input) {
