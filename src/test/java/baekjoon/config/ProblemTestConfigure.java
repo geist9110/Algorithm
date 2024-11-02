@@ -34,6 +34,17 @@ public abstract class ProblemTestConfigure {
         assertEquals(actual, outContent.toString());
     }
 
+    protected final void run(
+        String input,
+        String actual,
+        ProblemInterface problemInterface,
+        double tolerance
+    ) throws IOException {
+       setInput(input);
+       problemInterface.solution(null);
+       assertEquals(Double.parseDouble(actual), Double.parseDouble(outContent.toString()), tolerance);
+    }
+
     private void setInput(String input) {
         ByteArrayInputStream inContent = new ByteArrayInputStream(
             input.getBytes(StandardCharsets.UTF_8));
