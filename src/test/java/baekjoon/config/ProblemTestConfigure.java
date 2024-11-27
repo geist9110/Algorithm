@@ -31,7 +31,7 @@ public abstract class ProblemTestConfigure {
         throws IOException {
         setInput(input);
         problemInterface.solution(null);
-        assertEquals(actual, outContent.toString());
+        assertEquals(actual, outContent.toString().trim());
     }
 
     protected final void run(
@@ -40,9 +40,10 @@ public abstract class ProblemTestConfigure {
         ProblemInterface problemInterface,
         double tolerance
     ) throws IOException {
-       setInput(input);
-       problemInterface.solution(null);
-       assertEquals(Double.parseDouble(actual), Double.parseDouble(outContent.toString()), tolerance);
+        setInput(input);
+        problemInterface.solution(null);
+        assertEquals(Double.parseDouble(actual), Double.parseDouble(outContent.toString().trim()),
+            tolerance);
     }
 
     private void setInput(String input) {

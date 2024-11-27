@@ -17,7 +17,7 @@ class Problem_9095_Test extends ProblemTestConfigure {
 
     private static Stream<Arguments> testCase() {
         return Stream.of(
-            Arguments.of("3\n4\n7\n10", "7\n44\n274\n")
+            Arguments.of("3\n4\n7\n10", "7\n44\n274")
         );
     }
 }
