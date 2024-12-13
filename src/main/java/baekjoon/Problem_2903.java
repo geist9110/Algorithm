@@ -4,7 +4,6 @@ import baekjoon.config.ProblemInterface;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Scanner;
 
 public class Problem_2903 implements ProblemInterface {
 
@@ -46,6 +45,6 @@ public class Problem_2903 implements ProblemInterface {
     public void solution(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int N = Integer.parseInt(br.readLine());
-        System.out.print((int) Math.pow(Math.pow(2, new Scanner(System.in).nextInt()) + 1, 2));
+        System.out.print((int) Math.pow(Math.pow(2, N) + 1, 2));
     }
 }

@@ -31,7 +31,7 @@ public abstract class ProblemTestConfigure {
         throws IOException {
         setInput(input);
         problemInterface.solution(null);
-        assertEquals(actual, outContent.toString().trim());
+        assertEquals(removeSpaces(actual), removeSpaces(outContent.toString()));
     }
 
     protected final void run(
@@ -42,7 +42,8 @@ public abstract class ProblemTestConfigure {
     ) throws IOException {
         setInput(input);
         problemInterface.solution(null);
-        assertEquals(Double.parseDouble(actual), Double.parseDouble(outContent.toString().trim()),
+        assertEquals(Double.parseDouble(removeSpaces(actual)),
+            Double.parseDouble(removeSpaces(outContent.toString())),
             tolerance);
     }
 
@@ -50,5 +51,14 @@ public abstract class ProblemTestConfigure {
         ByteArrayInputStream inContent = new ByteArrayInputStream(
             input.getBytes(StandardCharsets.UTF_8));
         System.setIn(inContent);
+    }
+
+    private String removeSpaces(String input) {
+        return input
+            .lines()
+            .map(String::stripTrailing)
+            .reduce((s1, s2) -> s1 + "\n" + s2)
+            .orElse("")
+            .stripTrailing();
     }
 }
