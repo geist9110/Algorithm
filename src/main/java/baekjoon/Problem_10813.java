@@ -44,12 +44,12 @@ public class Problem_10813 implements ProblemInterface {
         int N = Integer.parseInt(st.nextToken());
         int M = Integer.parseInt(st.nextToken());
 
-        int[] basket = new int[N+1];
-        for(int i=1; i<=N; i++) {
+        int[] basket = new int[N + 1];
+        for (int i = 1; i <= N; i++) {
             basket[i] = i;
         }
 
-        for(int i=0; i<M; i++){
+        for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
             int a = Integer.parseInt(st.nextToken());
             int b = Integer.parseInt(st.nextToken());
@@ -58,7 +58,7 @@ public class Problem_10813 implements ProblemInterface {
             basket[b] = temp;
         }
 
-        for(int i=1; i<=N; i++) {
+        for (int i = 1; i <= N; i++) {
             sb.append(basket[i]).append(" ");
         }
 

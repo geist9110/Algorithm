@@ -17,9 +17,9 @@ public class Problem_15829 implements ProblemInterface {
         long M = 1234567891;
         long sum = 0;
 
-        for(char c : s.toCharArray()) {
+        for (char c : s.toCharArray()) {
             sum = (sum + ((c - 'a' + 1) * r) % M) % M;
-            r = (r*rMultiply) % M;
+            r = (r * rMultiply) % M;
         }
 
         System.out.print(sum);

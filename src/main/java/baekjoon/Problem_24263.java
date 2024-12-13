@@ -39,6 +39,6 @@ public class Problem_24263 implements ProblemInterface {
      */
     public void solution(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        System.out.print(Integer.parseInt(br.readLine())+"\n1");
+        System.out.print(Integer.parseInt(br.readLine()) + "\n1");
     }
 }

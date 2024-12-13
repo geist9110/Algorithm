@@ -1,7 +1,5 @@
 package baekjoon;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import baekjoon.config.ProblemTestConfigure;
 import java.io.IOException;
 import java.util.stream.Stream;

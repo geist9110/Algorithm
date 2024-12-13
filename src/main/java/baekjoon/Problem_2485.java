@@ -18,7 +18,7 @@ public class Problem_2485 implements ProblemInterface {
             tree[i] = Integer.parseInt(br.readLine());
             gcd = gcd(tree[i] - tree[i - 1], gcd);
         }
-        
+
         System.out.print((tree[N - 1] - tree[0]) / gcd - N + 1);
     }
 

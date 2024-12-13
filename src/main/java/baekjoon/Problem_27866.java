@@ -33,7 +33,7 @@ public class Problem_27866 implements ProblemInterface {
         int i = Integer.parseInt(br.readLine());
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        bw.write(S.charAt(i-1));
+        bw.write(S.charAt(i - 1));
         bw.close();
     }
 }

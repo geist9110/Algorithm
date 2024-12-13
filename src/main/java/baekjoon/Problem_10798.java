@@ -59,13 +59,13 @@ public class Problem_10798 implements ProblemInterface {
         int totalString = 5;
         int maxStringLength = 0;
         String[] strings = new String[totalString];
-        for(int i = 0; i < totalString; i++) {
+        for (int i = 0; i < totalString; i++) {
             strings[i] = br.readLine();
             maxStringLength = Math.max(maxStringLength, strings[i].length());
         }
 
-        for(int i=0; i<maxStringLength; i++){
-            for(int j=0; j<totalString; j++){
+        for (int i = 0; i < maxStringLength; i++) {
+            for (int j = 0; j < totalString; j++) {
                 sb.append(strings[j].length() > i ? strings[j].charAt(i) : "");
             }
         }

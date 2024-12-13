@@ -49,7 +49,7 @@ public class Problem_10811 implements ProblemInterface {
             baskets[i] = i;
         }
 
-        for (int m=0; m<M; m++) {
+        for (int m = 0; m < M; m++) {
             st = new StringTokenizer(br.readLine());
             int start = Integer.parseInt(st.nextToken());
             int end = Integer.parseInt(st.nextToken());
@@ -65,7 +65,7 @@ public class Problem_10811 implements ProblemInterface {
         }
 
         StringBuilder sb = new StringBuilder();
-        for(int i=1; i<=N; i++) {
+        for (int i = 1; i <= N; i++) {
             sb.append(baskets[i]).append(" ");
         }
 

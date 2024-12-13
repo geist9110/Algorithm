@@ -33,8 +33,8 @@ public class Problem_10988 implements ProblemInterface {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
         String s = br.readLine();
 
-        for (int i=0; i<s.length()/2; i++){
-            if(s.charAt(i) != s.charAt(s.length()-i-1)){
+        for (int i = 0; i < s.length() / 2; i++) {
+            if (s.charAt(i) != s.charAt(s.length() - i - 1)) {
                 bw.write("0");
                 bw.close();
                 return;

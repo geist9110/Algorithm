@@ -20,7 +20,8 @@ class Problem_25314_Test extends ProblemTestConfigure {
             Arguments.of("4", "long int"),
             Arguments.of("20", "long long long long long int"),
             Arguments.of("15", "long long long long int"),
-            Arguments.of("100", "long long long long long long long long long long long long long long long long long long long long long long long long long int")
+            Arguments.of("100",
+                "long long long long long long long long long long long long long long long long long long long long long long long long long int")
         );
     }
 }

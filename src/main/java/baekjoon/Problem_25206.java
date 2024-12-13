@@ -62,20 +62,20 @@ public class Problem_25206 implements ProblemInterface {
         float creditTotalSum = 0;
         float recordTotalSum = 0;
 
-        for(String line = br.readLine(); line != null; line = br.readLine()) {
+        for (String line = br.readLine(); line != null; line = br.readLine()) {
             StringTokenizer st = new StringTokenizer(line);
             st.nextToken();
             float credit = Float.parseFloat(st.nextToken());
             String grade = st.nextToken();
 
-            if(!grade.equals("P")){
+            if (!grade.equals("P")) {
                 recordTotalSum += gradeToRating(grade) * credit;
                 creditTotalSum += credit;
             }
         }
 
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        bw.write(recordTotalSum/creditTotalSum + "");
+        bw.write(recordTotalSum / creditTotalSum + "");
         bw.close();
     }
 

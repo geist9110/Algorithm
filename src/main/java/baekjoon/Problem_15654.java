@@ -24,7 +24,7 @@ public class Problem_15654 implements ProblemInterface {
         sequence = new int[M];
         st = new StringTokenizer(br.readLine());
         sb = new StringBuilder();
-        
+
         for (int i = 0; i < N; i++) {
             array[i] = Integer.parseInt(st.nextToken());
         }
